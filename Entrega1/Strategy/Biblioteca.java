@@ -27,20 +27,4 @@ public class Biblioteca
         System.out.println("Buscando en la biblioteca...");
     }
 
-    public static void main(String[] args) {
-        Biblioteca biblioteca = new Biblioteca();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingrese el titulo del medio que desea buscar: ");
-        String titulo = scanner.nextLine();
-        System.out.println("Ingrese el autor del medio que desea buscar: ");
-        String autor = scanner.nextLine();
-        System.out.println("Ingrese el genero del medio que desea buscar: ");
-        String genero = scanner.nextLine();
-        System.out.println("Ingrese el numero de paginas del medio que desea buscar: ");
-        int numPaginas = scanner.nextInt();
-        BusquedaTitulo busquedaTitulo = new BusquedaTitulo();
-        BusquedaAutor busquedaAutor = new BusquedaAutor();
-        BusquedaGenero busquedaGenero = new BusquedaGenero();
-        BusquedaNumPaginas busquedaNumPaginas = new BusquedaNumPaginas();
-    }
 }
