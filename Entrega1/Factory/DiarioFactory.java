@@ -5,11 +5,9 @@ import java.time.LocalDate;
 public class DiarioFactory
         extends Medio{
 
-    LocalDate fechaPublicacion;
-
-
-    public DiarioFactory(String titulo, int paginas, LocalDate fechaPublicacion, String genero, String autor) {
-        super(titulo, paginas, genero, autor);
-        this.fechaPublicacion = fechaPublicacion;
+    public DiarioFactory(String titulo, int paginas, String genero, String autor, String fechaPublicacion){
+        super(titulo, paginas, genero, autor, fechaPublicacion);}
+    public void createMedio(){
+        System.out.println("Diario creado.");
     }
 }

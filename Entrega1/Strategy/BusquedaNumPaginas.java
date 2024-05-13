@@ -1,14 +1,17 @@
 package Entrega1.Strategy;
 
+import Entrega1.Factory.Medio;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class BusquedaNumPaginas {
+public class BusquedaNumPaginas
+        extends Biblioteca {
 
 
-    public List<Biblioteca> busquedaNumPaginas(int numPaginas) {
-        return bibliotecas.stream()
-                .filter(medio -> medio.getNumPaginas() == numPaginas)
+    public List<Medio> busquedaNumPaginas(int numPaginas) {
+        return medios.stream()
+                .filter(medio -> medio.getPaginas() == numPaginas)
                 .collect(Collectors.toList());
     }
 
