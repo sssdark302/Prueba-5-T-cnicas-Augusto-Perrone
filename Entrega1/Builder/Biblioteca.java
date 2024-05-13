@@ -13,14 +13,28 @@ public class Biblioteca {
 
     public void buscarAutor() {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese el tipo de medio (Libro, Revista, Diario):");
+        String tipo = scanner.nextLine();
         System.out.println("Ingrese el nombre del autor a buscar:");
-        String input = scanner.nextLine();
-            String regex = ".*" + Pattern.quote(input) + ".*";
+        String autor = scanner.nextLine();
 
-        System.out.println("Resultados de la búsqueda:");
-        buscarAutoresEnMap(autoresLibros, regex, "Autores Libros");
-        buscarAutoresEnMap(autoresRevistas, regex, "Autores Revistas");
-        buscarAutoresEnMap(autoresDiario, regex, "Autores Diario");
+        String mapName = "Autores " + tipo;
+        String regex = ".*" + Pattern.quote(autor) + ".*";
+
+        switch (tipo.toLowerCase()) {
+            case "libro":
+                buscarAutoresEnMap(autoresLibros, regex, mapName);
+                break;
+            case "revista":
+                buscarAutoresEnMap(autoresRevistas, regex, mapName);
+                break;
+            case "diario":
+                buscarAutoresEnMap(autoresDiario, regex, mapName);
+                break;
+            default:
+                System.out.println("Tipo de medio no reconocido. Ingrese 'Libro', 'Revista' o 'Diario'.");
+                break;
+        }
     }
     private void buscarAutoresEnMap(Map<String, String> map, String regex, String mapName) {
         boolean encontrado = false;
