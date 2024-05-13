@@ -8,8 +8,8 @@ public class RevistaFactory
     LocalDate fechaPublicacion;
 
 
-    public RevistaFactory(String titulo, int paginas, LocalDate fechaPublicacion) {
-        super(titulo, paginas);
+    public RevistaFactory(String titulo, int paginas, LocalDate fechaPublicacion, String genero, String autor) {
+        super(titulo, paginas, genero, autor);
         this.fechaPublicacion= fechaPublicacion;
     }
 }
