@@ -9,8 +9,5 @@ public class Composite {
     MedioD magazine1 = new Revista("Magazine 1");
 
     GrupoMedia collection = new GrupoMedia();
-        collection.add(book1);
-        collection.add(book2);
-        collection.add(magazine1);
-        collection.displayInfo();
+
 }
